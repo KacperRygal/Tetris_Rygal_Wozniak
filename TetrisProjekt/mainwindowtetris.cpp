@@ -45,7 +45,7 @@ void MainWindowTetris::onBoardUpdated()
             for (int col = 0; col < Board::WidthBoard; ++col) {
                 int cellValue = gameWidget->getBoard()->getValue(row, col);
 
-                if(cellValue == 1)
+                if(cellValue == 1||cellValue==2)
                 {
                     QString color = QString("QLabel {background-color: %1;}").arg(colors[gameWidget->getBoard()->getColorBoard(row,col)].name());
                     //qInfo()<<color;
@@ -55,7 +55,7 @@ void MainWindowTetris::onBoardUpdated()
                 {
                     boardLabels[row][col]->setStyleSheet("QLabel {background-color: white;}");
                 }
-                dbg<<"|"<<cellValue;
+                dbg<<"|"<<cellValue<<" : "<<gameWidget->getBoard()->getColorBoard(row,col);
             }
             dbg<<"|";
         }
