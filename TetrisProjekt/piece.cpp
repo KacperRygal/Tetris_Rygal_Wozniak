@@ -40,8 +40,6 @@ int Piece::minY() const
     return min;
 }
 
-
-
 void Piece::setRandShape()
 {
     setShape(Tetromino(QRandomGenerator::global()->bounded(0,7)));
@@ -62,6 +60,16 @@ int Piece::x(int index) const
     return tabCoordinates[index][0];
 }
 
+int Piece::yn(int index) const
+{
+    return tabCoordinatesNext[index][1];
+}
+
+int Piece::xn(int index) const
+{
+    return tabCoordinatesNext[index][0];
+}
+
 int Piece::y(int index) const
 {
     return tabCoordinates[index][1];
@@ -72,9 +80,14 @@ Tetromino Piece::shape() const
     return pieceShape;
 }
 
+Tetromino Piece::getNextShape()
+{
+    return nextShape;
+}
+
 void Piece::moveBy(int x, int y)
 {
-    qInfo()<<"Ruszam";
+    //qInfo()<<"Ruszam";
     for(int i=0;i<4;i++)
     {
         setX(i,this->x(i)+x);
@@ -84,8 +97,7 @@ void Piece::moveBy(int x, int y)
 
 void Piece::setShape(Tetromino shape)
 {
-    qInfo() << shape;
-    ;
+    //qInfo() << shape;
 
     for(int i=0;i<4;i++)
     {
@@ -93,11 +105,19 @@ void Piece::setShape(Tetromino shape)
             tabCoordinates[i][j] = tabShapes[shape][i][j];
     }
     pieceShape=shape;
+    setNextShape(Tetromino(QRandomGenerator::global()->bounded(0,7)));
+    for(int i=0;i<4;i++)
+    {
+        for(int j=0;j<2;j++)
+            tabCoordinatesNext[i][j] = tabShapes[getNextShape()][i][j];
+    }
 }
+
+
 
 Piece Piece::rotate()
 {
-    qInfo()<<"RotLewo";
+    //qInfo()<<"RotLewo";
     if (pieceShape == squareShape)
             return *this;
 
@@ -105,7 +125,7 @@ Piece Piece::rotate()
 
         int px = (result.maxX() + result.minX()) / 2;
         int py = (result.maxY() + result.minY()) / 2;
-        qInfo()<<"Px:"<<px<<" Py:"<<py;
+        //qInfo()<<"Px:"<<px<<" Py:"<<py;
         for (int i = 0; i < 4; i++)
         {
             int x = result.x(i);
@@ -130,5 +150,8 @@ Piece Piece::rotate()
         return result;
 }
 
-
+void Piece::setNextShape(Tetromino shape)
+{
+    nextShape=shape;
+}
 

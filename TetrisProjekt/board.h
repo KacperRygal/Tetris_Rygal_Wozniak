@@ -16,11 +16,15 @@ public:
     void pause();
     void reset();
     int getValue(int row, int col);
+    int getNextPieceValue(int row, int col);
+    Tetromino getNextPieceColor();
     Tetromino getCurrentTetromino();
     Piece getCurrentPiece();
     void moveCurrentPieceSides(int x);
     void rotateCurrentPiece(bool toggle);
+    void moveCurrentPieceInstantDown();
     Tetromino getColorBoard(int row, int col);
+    void setTimerInterval(int time);
 signals:
     void boardUpdated();
 
@@ -30,17 +34,21 @@ private slots:
 private:
     QTimer *timer;
     QVector<QVector<int>> board;
+    QVector<QVector<int>> nextPieceBoard;
     QVector<QVector<Tetromino>> colorBoard;
+    Tetromino nextPieceColor;
     Piece currentPiece;
 
     void clearBoard();
     void updateCurrentPiece();
+    void updateNextPiece();
     bool isLegalMove(int x, int y, const Piece &p);
     void placePiece();
     void checkFullRows();
     void handleCollision();
     bool isRowFull(int row);
     void moveCurrentPieceDown();
+
     bool isWall = false;
     int currentX;
     int currentY;

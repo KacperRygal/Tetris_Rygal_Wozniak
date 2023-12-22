@@ -17,6 +17,8 @@ public:
 
    int x(int index) const;
    int y(int index) const;
+   int xn(int index) const;
+   int yn(int index) const;
 
    int minX() const;
    int maxX() const;
@@ -27,6 +29,8 @@ public:
    void setY(int index, int val);
    void moveBy(int x, int y);
    Piece rotate();
+   Tetromino getNextShape();
+    void setShape(Tetromino shape);
 
 private:
 
@@ -40,9 +44,12 @@ private:
        { {0,1}, {1,1}, {1,0}, {2,0} }, //SShape
        { {0,0}, {0,0}, {0,0}, {0,0} }, //emptyShape
    };
-   void setShape(Tetromino shape);
+
+   void setNextShape(Tetromino shape);
    Tetromino pieceShape;
+   Tetromino nextShape;
    int tabCoordinates[4][2];
+   int tabCoordinatesNext[4][2];
 };
 
 #endif // PIECE_H

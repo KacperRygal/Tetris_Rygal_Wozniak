@@ -32,7 +32,9 @@ private:
     QColor colors[7] = {Qt::red, Qt::green, Qt::blue, Qt::yellow, Qt::magenta, Qt::cyan, Qt::black};
     Ui::MainWindowTetris *ui;
     QGridLayout *boardLayout;
+    QGridLayout *nextPieceLayout;
     QLabel *boardLabels[Board::HeightBoard][Board::WidthBoard];
+    QLabel *boardNextPieceLabels[4][4];
     GameWidget *gameWidget;
 };
 #endif // MAINWINDOWTETRIS_H
