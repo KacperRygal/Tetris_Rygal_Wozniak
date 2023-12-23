@@ -60,46 +60,34 @@ MainWindowTetris::~MainWindowTetris()
 
 void MainWindowTetris::onBoardUpdated()
 {
-
-    for (int row = 0; row < Board::HeightBoard; ++row) {
-        //QDebug dbg(QtDebugMsg);
-            for (int col = 0; col < Board::WidthBoard; ++col) {
-                int cellValue = gameWidget->getBoard()->getValue(row, col);
-
-                if(cellValue == 1||cellValue==2)
-                {
-                    QString color = QString("QLabel {background-color: %1;}").arg(colors[gameWidget->getBoard()->getColorBoard(row,col)].name());
-                    //qInfo()<<color;
-                    boardLabels[row][col]->setStyleSheet(color);
-                }
-                else if(cellValue == 0)
-                {
-                    boardLabels[row][col]->setStyleSheet("QLabel {background-color: white;}");
-                }
-                //dbg<<"|"<<cellValue;//<<" : "<<gameWidget->getBoard()->getColorBoard(row,col);
+    for (int row = 0; row < Board::HeightBoard; ++row)
+    {
+        for (int col = 0; col < Board::WidthBoard; ++col)
+        {
+            int cellValue = gameWidget->getBoard()->getValue(row, col);
+            if(cellValue == 1 || cellValue == 2)
+            {
+                QString color = QString("QLabel {background-color: %1;}").arg(colors[gameWidget->getBoard()->getColorBoard(row,col)].name());
+                boardLabels[row][col]->setStyleSheet(color);
             }
-            //dbg<<"|";
+            else if(cellValue == 0)
+                boardLabels[row][col]->setStyleSheet("QLabel {background-color: white;}");
         }
-    for (int row = 0; row < 4; ++row) {
-        //QDebug dbg(QtDebugMsg);
-            for (int col = 0; col < 4; ++col) {
-                //boardNextPieceLabels[row][col]->setStyleSheet("QLabel {background-color: white;}");
-                int cellValue = gameWidget->getBoard()->getNextPieceValue(row, col);
-
-                if(cellValue == 1)
-                {
-                    QString color = QString("QLabel {background-color: %1;}").arg(colors[gameWidget->getBoard()->getNextPieceColor()].name());
-                    //qInfo()<<color;
-                    boardNextPieceLabels[row][col]->setStyleSheet(color);
-                }
-                else if(cellValue == 0)
-                {
+    }
+    for (int row = 0; row < 4; ++row)
+    {
+        for (int col = 0; col < 4; ++col)
+        {
+            int cellValue = gameWidget->getBoard()->getNextPieceValue(row, col);
+            if(cellValue == 1)
+            {
+                QString color = QString("QLabel {background-color: %1;}").arg(colors[gameWidget->getBoard()->getNextPieceColor()].name());
+                boardNextPieceLabels[row][col]->setStyleSheet(color);
+            }
+            else if(cellValue == 0)
                     boardNextPieceLabels[row][col]->setStyleSheet("QLabel {background-color: white;}");
-                }
-                //dbg<<"|"<<cellValue;//<<" : "<<gameWidget->getBoard()->getColorBoard(row,col);
-            }
-            //dbg<<"|";
         }
+    }
 }
 
 

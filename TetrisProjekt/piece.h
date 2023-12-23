@@ -30,7 +30,7 @@ public:
    void moveBy(int x, int y);
    Piece rotate();
    Tetromino getNextShape();
-    void setShape(Tetromino shape);
+   void setShape(Tetromino shape);
 
 private:
 

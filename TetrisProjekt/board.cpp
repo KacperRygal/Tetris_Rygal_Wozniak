@@ -9,18 +9,15 @@ Board::Board(QObject *parent) : QObject(parent), timer(new QTimer(this)), board(
     start();
 }
 
-//aktualizacja tablicy
-void Board::updateBoard(){
-    moveCurrentPieceDown();
-    emit boardUpdated();
-}
-
-//destruktor
+//DESTRUKTOR
 Board::~Board()
 {
     delete timer;
 }
 
+
+
+//GUZIKI I OBSLUGA ZDARZEN
 //wyzwolenie startu
 void Board::start()
 {
@@ -43,13 +40,37 @@ void Board::pause()
     timer->stop();
 }
 
-//
-void Board::setTimerInterval(int time){
-    if(timer->interval()!=time)
-    {
-        qInfo()<<"zmieniam czas";
-        timer->setInterval(time);
+
+
+//AKTUALIZACJE
+//aktualizacja obecnego
+void Board::updateCurrentPiece()
+{
+    isWall=false;
+    currentPiece.setShape(currentPiece.getNextShape());
+    nextPieceColor=currentPiece.getNextShape();
+    updateNextPiece();
+}
+
+//aktualizacja kolejnego
+void Board::updateNextPiece()
+{
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++)
+        {
+            nextPieceBoard[i][j]=0;
+        }
     }
+    for (int i=0;i<4;i++)
+    {
+        nextPieceBoard[currentPiece.yn(i)][currentPiece.xn(i)] = 1;
+    }
+}
+
+//aktualizacja tablicy
+void Board::updateBoard(){
+    moveCurrentPieceDown();
+    emit boardUpdated();
 }
 
 //wyczysc plansze
@@ -65,97 +86,18 @@ void Board::clearBoard()
     emit boardUpdated();
 }
 
-//przesuniecie klocka w dol
-void Board::moveCurrentPieceDown()
-{
-    Piece movedPiece = currentPiece;
-    movedPiece.moveBy(0,1);
-    bool temp = isLegalMove(currentY,currentX,movedPiece);
-    //qInfo() << "MoveDown";
-    if(temp)
+//ustawienie timera
+void Board::setTimerInterval(int time){
+    if(timer->interval()!=time)
     {
-        for (int i = 0; i < 4; i++)
-        {
-            board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
-            colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
-        }
-        currentPiece.moveBy(0, 1);
-        for (int i = 0; i < 4; i++)
-        {
-            board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
-            colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
-        }
-    }
-    else
-        handleCollision();
-    emit boardUpdated();
-}
-
-//przesuniecie klocka na dol instant
-void Board::moveCurrentPieceInstantDown(){
-    qInfo()<<"Zaczynam przesuwanie w dol";
-    bool x=true;
-    int m=1;
-    while(x){
-        qInfo()<<"Aktualne m:"<<m;
-        Piece movedPiece = currentPiece;
-        movedPiece.moveBy(0,m);
-        bool temp = isLegalMove(currentY,currentX,movedPiece);
-        if(temp)
-        {
-            qInfo()<<"Aktualizuje m";
-            m++;
-        }
-        else
-        {
-            qInfo()<<"Wykrylem max";
-            x=false;
-        }
-    }
-    m--;
-    for (int i = 0; i < 4; i++)
-    {
-        qInfo()<<"czyszcze";
-        board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
-        colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
-    }
-    currentPiece.moveBy(0, m);
-    for (int i = 0; i < 4; i++)
-    {
-        qInfo()<<"rysuje nowe";
-        board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
-        colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
-    }
-    handleCollision();
-    emit boardUpdated();
-
-}
-
-//aktualizacja klocka
-void Board::updateCurrentPiece()
-{
-    isWall=false;
-    currentPiece.setShape(currentPiece.getNextShape());
-    nextPieceColor=currentPiece.getNextShape();
-    updateNextPiece();
-}
-
-void Board::updateNextPiece()
-{
-    for(int i=0;i<4;i++){
-        for(int j=0;j<4;j++)
-        {
-            nextPieceBoard[i][j]=0;
-        }
-    }
-    for (int i=0;i<4;i++)
-    {
-        nextPieceBoard[currentPiece.yn(i)][currentPiece.xn(i)] = 1;
+        qInfo()<<"zmieniam czas";
+        timer->setInterval(time);
     }
 }
 
-//sprawdzenie legalnosci ruchu
 
+
+//SPRAWDZENIE LEGALNOSCI
 /*
  * Funkcja dostaje obecny X i obecny Y przechowywany jako miejsce w board oraz instancje klasy Piece. Chodzi o to ze,
  * curY i curX mają za zadanie przechować pozycje startową klocka - czyli x to połowa szerokosci tablicy, a y to 0. Instancja klasy Piece odpowiada
@@ -196,8 +138,10 @@ bool Board::isLegalMove(int curY, int curX, const Piece &p)
         }
         if(y < 0 || y >= HeightBoard) //4.
         {
-            if (y < 0) isWall = true;
-            else isWall = false;
+            if (y < 0)
+                isWall = true;
+            else
+                isWall = false;
 
             return false;
         } 
@@ -232,7 +176,8 @@ bool Board::isLegalMove(int curY, int curX, const Piece &p)
             if(isBlankSpaceBelow) //10.
             {
                 isWall=true;
-                if(!isCellOccupiedByCurrentPiece) return false;
+                if(!isCellOccupiedByCurrentPiece)
+                    return false;
             }
             if (!isCellOccupiedByCurrentPiece && !isBlankSpaceBelow) //11.
             {
@@ -244,34 +189,9 @@ bool Board::isLegalMove(int curY, int curX, const Piece &p)
     return true; //12.
 }
 
-//polozenie klocka
-void Board::placePiece()
-{
-    //qInfo() << "PlacePiece";
-    currentX = WidthBoard/2;
-    currentY = 0;
 
-    //qInfo() << "X:"<<currentX ;
-    //qInfo() << "Y:"<<currentY;
-    if(isLegalMove(currentY,currentX,currentPiece))
-    {
-        for (int i=0;i<4;i++)
-        {
-            board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
-            nextPieceBoard[currentPiece.yn(i)][currentPiece.xn(i)] = 1;
-            nextPieceColor=currentPiece.getNextShape();
-            colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
-        }
-    }
-    else
-    {
-        handleCollision();
-        return;
-    }
-    emit boardUpdated();
-}
 
-//wykrycie kolizji
+//WYKRYCIE KOLIZJI
 void Board::handleCollision()
 {
     //qInfo() << "HandleCollision";
@@ -294,57 +214,198 @@ void Board::handleCollision()
         checkFullRows();
         updateCurrentPiece();
     }
-
 }
 
+
+
+//RUCHY KLOCKA
+//polozenie klocka
+void Board::placePiece()
+{
+    currentX = WidthBoard/2;
+    currentY = 0;
+
+    if(isLegalMove(currentY,currentX,currentPiece))
+    {
+        for (int i=0;i<4;i++)
+        {
+            board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
+            nextPieceBoard[currentPiece.yn(i)][currentPiece.xn(i)] = 1;
+            nextPieceColor=currentPiece.getNextShape();
+            colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
+        }
+    }
+    else
+    {
+        handleCollision();
+        return;
+    }
+    emit boardUpdated();
+}
+
+//przesuwanie klocka na boki
+void Board::moveCurrentPieceSides(int x)
+{
+    Piece movedPiece = currentPiece;
+    movedPiece.moveBy(x,0);
+    bool temp = isLegalMove(currentY,currentX,movedPiece);
+    if(temp)
+    {
+        if(!isWall)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
+                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
+            }
+            currentPiece.moveBy(x, 0);
+            for (int i = 0; i < 4; i++)
+            {
+                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
+                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
+            }
+        }
+    }
+    else
+        handleCollision();
+
+    isWall = false;
+    emit boardUpdated();
+}
+
+//obrot klocka
+void Board::rotateCurrentPiece()
+{
+        Piece rotatedPiece = currentPiece;
+        bool temp = isLegalMove(currentY,currentX,rotatedPiece.rotate());
+
+        if(temp)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
+                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
+            }
+
+            currentPiece=currentPiece.rotate();
+
+            for (int i = 0; i < 4; i++)
+            {
+                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
+                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
+            }
+        }
+        else
+            handleCollision();
+
+    emit boardUpdated();
+}
+
+//przesuniecie klocka w dol
+void Board::moveCurrentPieceDown()
+{
+    Piece movedPiece = currentPiece;
+    movedPiece.moveBy(0,1);
+    bool temp = isLegalMove(currentY,currentX,movedPiece);
+    if(temp)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
+            colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
+        }
+        currentPiece.moveBy(0, 1);
+        for (int i = 0; i < 4; i++)
+        {
+            board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
+            colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
+        }
+    }
+    else
+        handleCollision();
+    emit boardUpdated();
+}
+
+//przesuniecie klocka na dol instant
+void Board::moveCurrentPieceInstantDown()
+{
+    bool x=true;
+    int m=1;
+    while(x)
+    {
+        Piece movedPiece = currentPiece;
+        movedPiece.moveBy(0,m);
+        bool temp = isLegalMove(currentY,currentX,movedPiece);
+
+        if(temp)
+            m++;
+        else
+            x = false;
+    }
+    m--;
+    for (int i = 0; i < 4; i++)
+    {
+        board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
+        colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
+    }
+    currentPiece.moveBy(0, m);
+    for (int i = 0; i < 4; i++)
+    {
+        board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
+        colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
+    }
+    handleCollision();
+    emit boardUpdated();
+}
+
+
+
+//SPRAWDZANIE LINII
 //sprawdzenie pelnych linii
 void Board::checkFullRows()
 {
     QVector<int> fullRows;
+
     for(int i=0;i<HeightBoard;i++)
-    {
         if (isRowFull(i))
-        {
             fullRows.append(i);
-        }
-    }
+
     for (int i = 0; i < fullRows.size(); i++)
-        {
-        //qInfo()<<"Tutaj usuwa sie po raz:"<<i;
-            int row = fullRows[i];
-            board.remove(row);
-            colorBoard.remove(row);
-            board.prepend(QVector<int>(WidthBoard, 0));
-            colorBoard.prepend(QVector<Tetromino>(WidthBoard, Tetromino::emptyShape));
-        }
-        emit boardUpdated();
+    {
+        int row = fullRows[i];
+        board.remove(row);
+        colorBoard.remove(row);
+        board.prepend(QVector<int>(WidthBoard, 0));
+        colorBoard.prepend(QVector<Tetromino>(WidthBoard, Tetromino::emptyShape));
+    }
+    emit boardUpdated();
 }
 
 //sprawdzenie czy linia pelna
 bool Board::isRowFull(int row)
 {
     for (int col = 0; col < WidthBoard; col++)
-        {
-            if (board[row][col] == 0)
-            {
-                return false;
-            }
-        }
-        return true;
+        if (board[row][col] == 0)
+            return false;
+    return true;
 }
 
 
+
+//SEKCJA GETERÓW
 //zwrocenie wartosci w tablicy
 int Board::getValue(int row, int col)
 {
     return board[row][col];
 }
 
+//zwrocenie wartosci z tablicy nastepnego klocka
 int Board::getNextPieceValue(int row, int col)
 {
     return nextPieceBoard[row][col];
 }
 
+//zwrocenie wartosci koloru nastepnego klocka
 Tetromino Board::getNextPieceColor()
 {
     return nextPieceColor;
@@ -367,68 +428,3 @@ Piece Board::getCurrentPiece()
 {
     return currentPiece;
 }
-
-//przesuwanie klocka na boki
-void Board::moveCurrentPieceSides(int x)
-{
-    Piece movedPiece = currentPiece;
-    movedPiece.moveBy(x,0);
-    bool temp = isLegalMove(currentY,currentX,movedPiece);
-    //() << "MoveSide";
-    if(temp)
-    {
-        if(!isWall)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
-                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
-            }
-            currentPiece.moveBy(x, 0);
-            for (int i = 0; i < 4; i++)
-            {
-                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
-                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
-            }
-        }
-    }
-    else
-        handleCollision();
-    isWall=false;
-    emit boardUpdated();
-}
-
-//obrot klocka
-void Board::rotateCurrentPiece(bool toggle)
-{
-    //qInfo() << "Rotate";
-
-        Piece rotatedPiece = currentPiece;
-        bool temp = isLegalMove(currentY,currentX,rotatedPiece.rotate());
-
-        if(temp)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 0;
-                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = Tetromino::emptyShape;
-            }
-
-            currentPiece=currentPiece.rotate();
-
-            for (int i = 0; i < 4; i++)
-            {
-                board[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = 1;
-                colorBoard[currentY + currentPiece.y(i)][currentX + currentPiece.x(i)] = getCurrentTetromino();
-            }
-        }
-        else
-        {
-        handleCollision();
-        }
-
-    emit boardUpdated();
-}
-
-
-

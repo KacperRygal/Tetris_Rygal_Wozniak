@@ -15,11 +15,7 @@ GameWidget::GameWidget(QWidget *parent)
     keyDelays[Qt::Key_Down] = 400;
 }
 
-Board* GameWidget::getBoard()
-{
-    return board;
-}
-
+//OBSLUGA ZDARZEN
 bool GameWidget::eventFilter(QObject *obj, QEvent *event)
 {
     if (obj == this)
@@ -31,9 +27,7 @@ bool GameWidget::eventFilter(QObject *obj, QEvent *event)
             int customDelay = keyDelays.value(keyEvent->key(), delay);
 
             if (keyPressTimer.isValid() && keyPressTimer.elapsed() < customDelay)
-            {
                 return true;
-            }
 
             keyPressTimer.start();
 
@@ -41,23 +35,18 @@ bool GameWidget::eventFilter(QObject *obj, QEvent *event)
             {
                 case Qt::Key_Left:
                     board->moveCurrentPieceSides(-1);
-                    //qInfo()<<"Lewo";
                     break;
                 case Qt::Key_Right:
                     board->moveCurrentPieceSides(1);
-                    //qInfo()<<"Prawo";
                     break;
                 case Qt::Key_Up:
-                    rotationToggle=!rotationToggle;
-                    board->rotateCurrentPiece(rotationToggle);
-                    //qInfo()<<"Obrot";
+                    board->rotateCurrentPiece();
                     break;
                 case Qt::Key_Space:
-                    //qInfo()<<"Spacja";
                     board->moveCurrentPieceInstantDown();
                     break;
                 case Qt::Key_Down:
-                    board->setTimerInterval(200);
+                    board->setTimerInterval(50);
                     break;
             }
         }
@@ -78,4 +67,11 @@ bool GameWidget::eventFilter(QObject *obj, QEvent *event)
     }
 
     return QObject::eventFilter(obj, event);
+}
+
+
+//GETTERY
+Board* GameWidget::getBoard()
+{
+    return board;
 }

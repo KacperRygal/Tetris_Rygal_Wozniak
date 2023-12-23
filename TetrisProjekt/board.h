@@ -12,19 +12,23 @@ public:
     ~Board();
     static const int WidthBoard = 10;
     static const int HeightBoard = 20;
+
     void start();
     void pause();
     void reset();
+
+    void moveCurrentPieceSides(int x);
+    void rotateCurrentPiece();
+    void moveCurrentPieceInstantDown();
+
+    Piece getCurrentPiece();
     int getValue(int row, int col);
     int getNextPieceValue(int row, int col);
     Tetromino getNextPieceColor();
     Tetromino getCurrentTetromino();
-    Piece getCurrentPiece();
-    void moveCurrentPieceSides(int x);
-    void rotateCurrentPiece(bool toggle);
-    void moveCurrentPieceInstantDown();
     Tetromino getColorBoard(int row, int col);
     void setTimerInterval(int time);
+
 signals:
     void boardUpdated();
 
@@ -38,6 +42,9 @@ private:
     QVector<QVector<Tetromino>> colorBoard;
     Tetromino nextPieceColor;
     Piece currentPiece;
+    bool isWall = false;
+    int currentX;
+    int currentY;
 
     void clearBoard();
     void updateCurrentPiece();
@@ -49,9 +56,6 @@ private:
     bool isRowFull(int row);
     void moveCurrentPieceDown();
 
-    bool isWall = false;
-    int currentX;
-    int currentY;
 };
 
 

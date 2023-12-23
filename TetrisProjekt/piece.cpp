@@ -47,12 +47,14 @@ void Piece::setRandShape()
 
 void Piece::setX(int index, int val)
 {
-    if(index>=0 && index<=3) tabCoordinates[index][0]=val;
+    if(index>=0 && index<=3)
+        tabCoordinates[index][0]=val;
 }
 
 void Piece::setY(int index, int val)
 {
-    if(index>=0 && index<=3) tabCoordinates[index][1]=val;
+    if(index>=0 && index<=3)
+        tabCoordinates[index][1]=val;
 }
 
 int Piece::x(int index) const
@@ -87,7 +89,6 @@ Tetromino Piece::getNextShape()
 
 void Piece::moveBy(int x, int y)
 {
-    //qInfo()<<"Ruszam";
     for(int i=0;i<4;i++)
     {
         setX(i,this->x(i)+x);
@@ -97,27 +98,22 @@ void Piece::moveBy(int x, int y)
 
 void Piece::setShape(Tetromino shape)
 {
-    //qInfo() << shape;
-
     for(int i=0;i<4;i++)
-    {
         for(int j=0;j<2;j++)
             tabCoordinates[i][j] = tabShapes[shape][i][j];
-    }
+
     pieceShape=shape;
     setNextShape(Tetromino(QRandomGenerator::global()->bounded(0,7)));
+
     for(int i=0;i<4;i++)
-    {
         for(int j=0;j<2;j++)
             tabCoordinatesNext[i][j] = tabShapes[getNextShape()][i][j];
-    }
 }
 
 
 
 Piece Piece::rotate()
 {
-    //qInfo()<<"RotLewo";
     if (pieceShape == squareShape)
             return *this;
 
@@ -125,7 +121,6 @@ Piece Piece::rotate()
 
         int px = (result.maxX() + result.minX()) / 2;
         int py = (result.maxY() + result.minY()) / 2;
-        //qInfo()<<"Px:"<<px<<" Py:"<<py;
         for (int i = 0; i < 4; i++)
         {
             int x = result.x(i);
