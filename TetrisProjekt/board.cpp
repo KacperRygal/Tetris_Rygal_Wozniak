@@ -6,7 +6,6 @@ Board::Board(QObject *parent) : QObject(parent), timer(new QTimer(this)), board(
     currentPiece.setRandShape();
     connect(timer,&QTimer::timeout,this,&Board::updateBoard);
     timer->setInterval(400);
-    start();
 }
 
 //DESTRUKTOR
@@ -21,9 +20,14 @@ Board::~Board()
 //wyzwolenie startu
 void Board::start()
 {
-    timer->start();
-    updateCurrentPiece();
-    placePiece();
+    timer->start();   
+    if(!isPause)
+    {
+        updateCurrentPiece();
+        placePiece();
+    }
+    else
+        isPause=false;
 }
 
 //wyzwolenie resetu
@@ -38,8 +42,8 @@ void Board::reset()
 void Board::pause()
 {
     timer->stop();
+    isPause=true;
 }
-
 
 
 //AKTUALIZACJE
@@ -50,6 +54,15 @@ void Board::updateCurrentPiece()
     currentPiece.setShape(currentPiece.getNextShape());
     nextPieceColor=currentPiece.getNextShape();
     updateNextPiece();
+    if(levelRows>=5)
+    {
+        levelRows-=5;
+        if(timer->interval()>=40)
+        {
+            setTimerInterval(timer->interval()-20);
+            score.updateCurrentLevel();
+        }
+    }
 }
 
 //aktualizacja kolejnego
@@ -89,10 +102,7 @@ void Board::clearBoard()
 //ustawienie timera
 void Board::setTimerInterval(int time){
     if(timer->interval()!=time)
-    {
-        qInfo()<<"zmieniam czas";
         timer->setInterval(time);
-    }
 }
 
 
@@ -240,6 +250,7 @@ void Board::placePiece()
         handleCollision();
         return;
     }
+    setTimerInterval(400);
     emit boardUpdated();
 }
 
@@ -377,7 +388,10 @@ void Board::checkFullRows()
         colorBoard.remove(row);
         board.prepend(QVector<int>(WidthBoard, 0));
         colorBoard.prepend(QVector<Tetromino>(WidthBoard, Tetromino::emptyShape));
+        levelRows++;
+        deletedRows++;
     }
+    score.addPointsByDeletedRows(fullRows.size());
     emit boardUpdated();
 }
 
@@ -427,4 +441,16 @@ Tetromino Board::getCurrentTetromino()
 Piece Board::getCurrentPiece()
 {
     return currentPiece;
+}
+
+//zwrocenie wyniku
+Score Board::getScore()
+{
+    return score;
+}
+
+//zwrocenie usunietych lini
+int Board::getRemovedLines()
+{
+    return deletedRows;
 }

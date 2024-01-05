@@ -46,7 +46,7 @@ bool GameWidget::eventFilter(QObject *obj, QEvent *event)
                     board->moveCurrentPieceInstantDown();
                     break;
                 case Qt::Key_Down:
-                    board->setTimerInterval(50);
+                    board->setTimerInterval(10);
                     break;
             }
         }
@@ -58,9 +58,7 @@ bool GameWidget::eventFilter(QObject *obj, QEvent *event)
             {
                 case Qt::Key_Down:
                     if (!keyEvent->isAutoRepeat())
-                    {
                         board->setTimerInterval(400);
-                    }
                     break;
             }
         }
@@ -68,7 +66,6 @@ bool GameWidget::eventFilter(QObject *obj, QEvent *event)
 
     return QObject::eventFilter(obj, event);
 }
-
 
 //GETTERY
 Board* GameWidget::getBoard()

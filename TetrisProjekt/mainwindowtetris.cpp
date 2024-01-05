@@ -10,6 +10,11 @@ MainWindowTetris::MainWindowTetris(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("Projekt Tetris");
 
+    ui->pauseButton->setEnabled(false);
+    ui->displayLevel->setEnabled(false);
+    ui->displayRemovedLines->setEnabled(false);
+    ui->displayScore->setEnabled(false);
+
     gameWidget = new GameWidget(this);
     connect(gameWidget->getBoard(), SIGNAL(boardUpdated()), this, SLOT(onBoardUpdated()));
     gameWidget->setFocusPolicy(Qt::StrongFocus);
@@ -88,6 +93,9 @@ void MainWindowTetris::onBoardUpdated()
                     boardNextPieceLabels[row][col]->setStyleSheet("QLabel {background-color: white;}");
         }
     }
+    ui->displayLevel->setText(QString::number(gameWidget->getBoard()->getScore().getCurrentLevel()));
+    ui->displayScore->setText(QString::number(gameWidget->getBoard()->getScore().getScore()));
+    ui->displayRemovedLines->setText(QString::number(gameWidget->getBoard()->getRemovedLines()));
 }
 
 
@@ -95,12 +103,16 @@ void MainWindowTetris::onBoardUpdated()
 void MainWindowTetris::on_pushButton_clicked()
 {
     gameWidget->getBoard()->start();
+    ui->pushButton->setEnabled(false);
+    ui->pauseButton->setEnabled(true);
 }
 
 
 void MainWindowTetris::on_pauseButton_clicked()
 {
     gameWidget->getBoard()->pause();
+    ui->pauseButton->setEnabled(false);
+    ui->pushButton->setEnabled(true);
 }
 
 

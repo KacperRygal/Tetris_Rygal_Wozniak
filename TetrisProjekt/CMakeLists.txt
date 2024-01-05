@@ -23,6 +23,8 @@ set(PROJECT_SOURCES
         piece.cpp
         gamewidget.h
         gamewidget.cpp
+        score.h
+        score.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

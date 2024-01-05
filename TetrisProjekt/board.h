@@ -2,6 +2,7 @@
 #define BOARD_H
 
 #include "piece.h"
+#include "score.h"
 #include <QTimer>
 #include <QVector>
 
@@ -16,6 +17,7 @@ public:
     void start();
     void pause();
     void reset();
+    void end();
 
     void moveCurrentPieceSides(int x);
     void rotateCurrentPiece();
@@ -28,7 +30,8 @@ public:
     Tetromino getCurrentTetromino();
     Tetromino getColorBoard(int row, int col);
     void setTimerInterval(int time);
-
+    Score getScore();
+    int getRemovedLines();
 signals:
     void boardUpdated();
 
@@ -43,8 +46,13 @@ private:
     Tetromino nextPieceColor;
     Piece currentPiece;
     bool isWall = false;
+    bool isPause = false;
     int currentX;
     int currentY;
+    int deletedRows = 0;
+    int levelRows = 0;
+    Score score;
+    bool timerFlag = false;
 
     void clearBoard();
     void updateCurrentPiece();
