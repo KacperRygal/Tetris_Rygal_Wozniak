@@ -11,16 +11,17 @@ class GameWidget : public QWidget
 public:
     explicit GameWidget(QWidget *parent = nullptr);
     Board* getBoard();
-signals:
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
-protected:
-    void keyPressEvent(QKeyEvent *event) override;
+signals:
 
 private:
     Board* board;
     bool rotationToggle = true;
     QElapsedTimer keyPressTimer;
-    const int delay = 100;
+    QElapsedTimer keyDownTimer;
+    const int delay = 400;
+    QMap<int, int> keyDelays;
 
 };
 

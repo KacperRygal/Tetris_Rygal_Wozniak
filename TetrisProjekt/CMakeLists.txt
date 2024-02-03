@@ -23,12 +23,23 @@ set(PROJECT_SOURCES
         piece.cpp
         gamewidget.h
         gamewidget.cpp
+        score.h
+        score.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(TetrisProjekt
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        menu.h menu.cpp menu.ui
+        save.h save.cpp save.ui
+        ../build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/wynik.txt
+
+
+
+
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET TetrisProjekt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

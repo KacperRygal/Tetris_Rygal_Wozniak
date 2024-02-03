@@ -63,8 +63,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-63tb60"
-      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-63tb60"
+      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-04j61m"
+      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-04j61m"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -72,11 +72,11 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-63tb60'
+        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-04j61m'
         
-        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_4d51e
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_4d51e.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_4d51e.dir\\ /FS -c E:\\Qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp
-        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_4d51e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4d51e.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_4d51e.exe /implib:cmTC_4d51e.lib /pdb:cmTC_4d51e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_861dc
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_861dc.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_861dc.dir\\ /FS -c E:\\Qt\\Tools\\CMake_64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp
+        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_861dc.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_861dc.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_861dc.exe /implib:cmTC_861dc.lib /pdb:cmTC_861dc.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -94,8 +94,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ycrw60"
-      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ycrw60"
+      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-p2ozma"
+      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-p2ozma"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -105,13 +105,13 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ycrw60'
+        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-p2ozma'
         
-        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_562ff
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_562ff.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_562ff.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ycrw60\\src.cxx
-        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_562ff.dir/src.cxx.obj 
-        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_562ff.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_562ff.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ycrw60\\src.cxx
-        C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ycrw60\\src.cxx(1): fatal error C1083: Nie można otworzyć pliku dołącz: 'pthread.h': No such file or directory
+        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_3d32a
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_3d32a.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_3d32a.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-p2ozma\\src.cxx
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_3d32a.dir/src.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_3d32a.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_3d32a.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-p2ozma\\src.cxx
+        C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-p2ozma\\src.cxx(1): fatal error C1083: Nie można otworzyć pliku dołącz: 'pthread.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -129,8 +129,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-77ayoi"
-      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-77ayoi"
+      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rqbp2b"
+      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rqbp2b"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -140,14 +140,14 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-77ayoi'
+        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rqbp2b'
         
-        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_67249
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_67249.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_67249.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-77ayoi\\CheckFunctionExists.cxx
-        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_67249.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_67249.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_67249.exe /implib:cmTC_67249.lib /pdb:cmTC_67249.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        \x1b[31mFAILED: \x1b[0mcmTC_67249.exe 
-        cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_67249.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_67249.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_67249.exe /implib:cmTC_67249.lib /pdb:cmTC_67249.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_67249.dir\\CheckFunctionExists.cxx.obj /out:cmTC_67249.exe /implib:cmTC_67249.lib /pdb:cmTC_67249.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_67249.dir/intermediate.manifest CMakeFiles\\cmTC_67249.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_8b209
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_8b209.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_8b209.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rqbp2b\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_8b209.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8b209.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_8b209.exe /implib:cmTC_8b209.lib /pdb:cmTC_8b209.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        \x1b[31mFAILED: \x1b[0mcmTC_8b209.exe 
+        cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_8b209.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8b209.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_8b209.exe /implib:cmTC_8b209.lib /pdb:cmTC_8b209.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8b209.dir\\CheckFunctionExists.cxx.obj /out:cmTC_8b209.exe /implib:cmTC_8b209.lib /pdb:cmTC_8b209.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_8b209.dir/intermediate.manifest CMakeFiles\\cmTC_8b209.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: nie można otworzyć pliku "pthreads.lib"\x0d
         ninja: build stopped: subcommand failed.
         
@@ -166,8 +166,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-uxg7q0"
-      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-uxg7q0"
+      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-q1bsyz"
+      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-q1bsyz"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -177,14 +177,14 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-uxg7q0'
+        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-q1bsyz'
         
-        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_a9625
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_a9625.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_a9625.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-uxg7q0\\CheckFunctionExists.cxx
-        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_a9625.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a9625.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_a9625.exe /implib:cmTC_a9625.lib /pdb:cmTC_a9625.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        \x1b[31mFAILED: \x1b[0mcmTC_a9625.exe 
-        cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_a9625.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a9625.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_a9625.exe /implib:cmTC_a9625.lib /pdb:cmTC_a9625.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a9625.dir\\CheckFunctionExists.cxx.obj /out:cmTC_a9625.exe /implib:cmTC_a9625.lib /pdb:cmTC_a9625.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_a9625.dir/intermediate.manifest CMakeFiles\\cmTC_a9625.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_81e64
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_81e64.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_81e64.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-q1bsyz\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_81e64.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_81e64.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_81e64.exe /implib:cmTC_81e64.lib /pdb:cmTC_81e64.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        \x1b[31mFAILED: \x1b[0mcmTC_81e64.exe 
+        cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_81e64.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_81e64.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_81e64.exe /implib:cmTC_81e64.lib /pdb:cmTC_81e64.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_81e64.dir\\CheckFunctionExists.cxx.obj /out:cmTC_81e64.exe /implib:cmTC_81e64.lib /pdb:cmTC_81e64.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_81e64.dir/intermediate.manifest CMakeFiles\\cmTC_81e64.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: nie można otworzyć pliku "pthread.lib"\x0d
         ninja: build stopped: subcommand failed.
         
@@ -208,8 +208,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-fh6ed2"
-      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-fh6ed2"
+      source: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-g757u8"
+      binary: "C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-g757u8"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -219,11 +219,11 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-fh6ed2'
+        Change Dir: 'C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-g757u8'
         
-        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_79498
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DHAVE_STDATOMIC  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_79498.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_79498.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-fh6ed2\\src.cxx
-        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_79498.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_79498.dir\\src.cxx.obj  /out:cmTC_79498.exe /implib:cmTC_79498.lib /pdb:cmTC_79498.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): C:/PROGRA~1/MICROS~2/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_7898b
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DHAVE_STDATOMIC  -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /showIncludes /FoCMakeFiles\\cmTC_7898b.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_7898b.dir\\ /FS -c C:\\Users\\K\\Desktop\\insta\\Tetris\\build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-g757u8\\src.cxx
+        [2/2] cmd.exe /C "cd . && E:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_7898b.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7898b.dir\\src.cxx.obj  /out:cmTC_7898b.exe /implib:cmTC_7898b.lib /pdb:cmTC_7898b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
 ...

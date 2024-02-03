@@ -2,3 +2,5 @@
 #include "EWIEGA46WW/moc_board.cpp"
 #include "EWIEGA46WW/moc_gamewidget.cpp"
 #include "EWIEGA46WW/moc_mainwindowtetris.cpp"
+#include "EWIEGA46WW/moc_menu.cpp"
+#include "EWIEGA46WW/moc_save.cpp"

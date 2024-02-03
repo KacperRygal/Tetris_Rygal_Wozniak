@@ -1,5 +1,6 @@
 C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/TetrisProjekt_autogen/EWIEGA46WW/moc_board.cpp: C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/board.h \
   C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/piece.h \
+  C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/score.h \
   E:/Qt/6.6.1/msvc2019_64/include/QtCore/QPoint \
   E:/Qt/6.6.1/msvc2019_64/include/QtCore/QTimer \
   E:/Qt/6.6.1/msvc2019_64/include/QtCore/QVector \

@@ -1,7 +1,10 @@
 C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/TetrisProjekt_autogen/EWIEGA46WW/moc_mainwindowtetris.cpp: C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/mainwindowtetris.h \
   C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/board.h \
   C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/gamewidget.h \
+  C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/menu.h \
   C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/piece.h \
+  C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/save.h \
+  C:/Users/K/Desktop/insta/Tetris/TetrisProjekt/score.h \
   E:/Qt/6.6.1/msvc2019_64/include/QtCore/QElapsedTimer \
   E:/Qt/6.6.1/msvc2019_64/include/QtCore/QPoint \
   E:/Qt/6.6.1/msvc2019_64/include/QtCore/QTimer \
@@ -153,11 +156,13 @@ C:/Users/K/Desktop/insta/Tetris/build-TetrisProjekt-Desktop_x86_windows_msvc2022
   E:/Qt/6.6.1/msvc2019_64/include/QtGui/qtransform.h \
   E:/Qt/6.6.1/msvc2019_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.6.1/msvc2019_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/QDialog \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/QGridLayout \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/QLabel \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/QMainWindow \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/QWidget \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/qboxlayout.h \
+  E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/qdialog.h \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/qframe.h \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/qgridlayout.h \
   E:/Qt/6.6.1/msvc2019_64/include/QtWidgets/qlabel.h \

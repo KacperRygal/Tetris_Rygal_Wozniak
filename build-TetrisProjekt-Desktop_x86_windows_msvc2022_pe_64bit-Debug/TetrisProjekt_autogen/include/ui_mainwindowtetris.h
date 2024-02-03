@@ -11,6 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -26,6 +28,13 @@ public:
     QPushButton *pushButton;
     QPushButton *pauseButton;
     QPushButton *clearButton;
+    QLabel *label;
+    QLabel *label_2;
+    QLabel *label_3;
+    QLineEdit *displayScore;
+    QLineEdit *displayLevel;
+    QLineEdit *displayRemovedLines;
+    QPushButton *ZapiszBtn;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,13 +47,34 @@ public:
         centralwidget->setObjectName("centralwidget");
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(670, 40, 75, 24));
+        pushButton->setGeometry(QRect(670, 30, 75, 24));
         pauseButton = new QPushButton(centralwidget);
         pauseButton->setObjectName("pauseButton");
-        pauseButton->setGeometry(QRect(670, 110, 75, 24));
+        pauseButton->setGeometry(QRect(670, 120, 75, 24));
         clearButton = new QPushButton(centralwidget);
         clearButton->setObjectName("clearButton");
         clearButton->setGeometry(QRect(670, 170, 75, 24));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(680, 220, 49, 16));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(680, 280, 49, 16));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(660, 350, 81, 20));
+        displayScore = new QLineEdit(centralwidget);
+        displayScore->setObjectName("displayScore");
+        displayScore->setGeometry(QRect(650, 250, 113, 24));
+        displayLevel = new QLineEdit(centralwidget);
+        displayLevel->setObjectName("displayLevel");
+        displayLevel->setGeometry(QRect(650, 310, 113, 24));
+        displayRemovedLines = new QLineEdit(centralwidget);
+        displayRemovedLines->setObjectName("displayRemovedLines");
+        displayRemovedLines->setGeometry(QRect(650, 380, 113, 24));
+        ZapiszBtn = new QPushButton(centralwidget);
+        ZapiszBtn->setObjectName("ZapiszBtn");
+        ZapiszBtn->setGeometry(QRect(670, 80, 75, 24));
         MainWindowTetris->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindowTetris);
         menubar->setObjectName("menubar");
@@ -65,6 +95,10 @@ public:
         pushButton->setText(QCoreApplication::translate("MainWindowTetris", "Start", nullptr));
         pauseButton->setText(QCoreApplication::translate("MainWindowTetris", "Pause", nullptr));
         clearButton->setText(QCoreApplication::translate("MainWindowTetris", "Clear", nullptr));
+        label->setText(QCoreApplication::translate("MainWindowTetris", "Score", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindowTetris", "Level", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindowTetris", "Lines removed", nullptr));
+        ZapiszBtn->setText(QCoreApplication::translate("MainWindowTetris", "Zapisz", nullptr));
     } // retranslateUi
 
 };
