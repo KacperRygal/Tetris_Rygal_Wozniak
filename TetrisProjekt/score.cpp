@@ -6,6 +6,12 @@ Score::Score()
     currentLevel=0;
 }
 
+void Score::reset()
+{
+    actualScore=0;
+    currentLevel=0;
+}
+
 
 void Score::addPointsByDeletedRows(int deletedRows)
 {

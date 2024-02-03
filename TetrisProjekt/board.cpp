@@ -35,6 +35,9 @@ void Board::start()
 void Board::reset()
 {
     timer->stop();
+    deletedRows = 0;
+    levelRows = 0;
+    score.reset();
     clearBoard();
     start();
 }
@@ -216,8 +219,9 @@ void Board::handleCollision()
     {
         if(currentY + currentPiece.minY() <= 0)
             {
-                reset();
-                return;
+
+            pause();                                                                          //przegrana
+            emit koniec();
             }
         for (int i=0;i<4;i++)
         {

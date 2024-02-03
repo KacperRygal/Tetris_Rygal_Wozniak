@@ -1,8 +1,9 @@
-#include "menu.h"
+
 #include "mainwindowtetris.h"
 #include "./ui_mainwindowtetris.h"
 #include "gamewidget.h"
 #include "save.h"
+#include "menu.h"
 #include <QString>
 
 
@@ -14,13 +15,18 @@ MainWindowTetris::MainWindowTetris(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("Projekt Tetris");
 
-    menu = new Menu(this);
-    connect(menu, &Menu::zakonczClicked, this, &MainWindowTetris::zamknijOkno);
-    menu->exec();
-
     save = new Save(this);
     connect(save,&Save::zapisaneClicked,this, &MainWindowTetris::zamknijZapisane);
+    connect(save,&Save::pokazMenu,this, &MainWindowTetris::pokazMenu);
     save->hide();
+
+    menu = new Menu(this);
+    connect(menu, &Menu::zakonczClicked, this, &MainWindowTetris::zamknijOkno);
+    connect(menu, &Menu::nowaGra, this, &MainWindowTetris::nowaGra);
+
+    menu->setModal(true);
+    menu->show();
+
 
     ui->pauseButton->setEnabled(false);
     ui->displayLevel->setEnabled(false);
@@ -28,9 +34,13 @@ MainWindowTetris::MainWindowTetris(QWidget *parent)
     ui->displayScore->setEnabled(false);
 
     gameWidget = new GameWidget(this);
+
+    connect(gameWidget->getBoard(), SIGNAL(koniec()), this, SLOT(on_ZapiszBtn_clicked()));
     connect(gameWidget->getBoard(), SIGNAL(boardUpdated()), this, SLOT(onBoardUpdated()));
     gameWidget->setFocusPolicy(Qt::StrongFocus);
     gameWidget->setFocus();
+
+
 
 
     QHBoxLayout *mainLayout = new QHBoxLayout(ui->centralwidget);
@@ -137,8 +147,10 @@ void MainWindowTetris::on_clearButton_clicked()
 }
 
 void MainWindowTetris::zamknijOkno() {
-    menu->close();
-    this->close();
+    emit Zamknij();
+   // menu->close();
+  //  save->close();
+  //  this->close();
 }
 
 void MainWindowTetris::on_ZapiszBtn_clicked()
@@ -150,7 +162,25 @@ void MainWindowTetris::on_ZapiszBtn_clicked()
 
 void MainWindowTetris::zamknijZapisane()
 {
-    save->close();
-    this->close();
+    emit Zamknij();
+  //  save->close();
+  //  menu->close();
+   // this->close();
 }
+
+void MainWindowTetris::pokazMenu()
+{
+    save->hide();
+    gameWidget->getBoard()->reset();
+    menu->Wyswietl();
+    menu->show();
+}
+
+void MainWindowTetris::nowaGra()
+{
+    menu->hide();
+    on_clearButton_clicked();
+    this->show();
+}
+
 

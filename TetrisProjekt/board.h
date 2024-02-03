@@ -8,6 +8,7 @@
 
 class Board : public QObject{
     Q_OBJECT
+
 public:
     explicit Board(QObject *parent = nullptr);
     ~Board();
@@ -35,6 +36,7 @@ public:
 
 signals:
     void boardUpdated();
+    void koniec();
 
 private slots:
     void updateBoard();

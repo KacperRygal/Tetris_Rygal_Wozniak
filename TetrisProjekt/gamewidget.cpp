@@ -46,7 +46,7 @@ bool GameWidget::eventFilter(QObject *obj, QEvent *event)
                     board->moveCurrentPieceInstantDown();
                     break;
                 case Qt::Key_Down:
-                    board->setTimerInterval(10);
+                    board->setTimerInterval(100);
                     break;
             }
         }

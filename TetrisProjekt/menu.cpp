@@ -9,6 +9,12 @@ Menu::Menu(QWidget *parent)
 {
     ui->setupUi(this);
 
+    Wyswietl();
+}
+
+void Menu::Wyswietl()
+{
+    ui->ListaWynik->clear();
     QString fileName = "wynik.txt";
 
     QFile file(fileName);
@@ -36,8 +42,6 @@ Menu::Menu(QWidget *parent)
         QListWidgetItem *item = new QListWidgetItem(line);
         ui->ListaWynik->addItem(item);
     }
-
-
 }
 
 Menu::~Menu()
@@ -47,7 +51,7 @@ Menu::~Menu()
 
 void Menu::on_NowaGraBtn_clicked()
 {
-    this->close();
+    emit nowaGra();
 }
 
 
@@ -55,4 +59,30 @@ void Menu::on_ZakonczBtn_clicked()
 {
     emit zakonczClicked();
 }
+
+
+void Menu::on_SkasujBtn_clicked()
+{
+
+    QListWidgetItem *item = ui->ListaWynik->currentItem();
+    if (item != nullptr) {
+        delete ui->ListaWynik->takeItem(ui->ListaWynik->row(item));
+    }
+
+    QFile file("wynik.txt");
+
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+
+        QTextStream stream(&file);
+        for(int i=0;i<ui->ListaWynik->count();i++)
+        {
+
+        QString textToWrite =ui->ListaWynik->item(i)->text() +"\n";
+        stream << textToWrite;
+        }
+
+        file.close();
+    }
+}
+
 

@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Pause</string>
+     <string>Pauza</string>
     </property>
    </widget>
    <widget class="QPushButton" name="clearButton">
@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Clear</string>
+     <string>Reset</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Score</string>
+     <string>Wynik</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -76,7 +76,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Level</string>
+     <string>Poziom</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -84,12 +84,12 @@
      <rect>
       <x>660</x>
       <y>350</y>
-      <width>81</width>
+      <width>91</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Lines removed</string>
+     <string>Skasowane linie</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="displayScore">
@@ -126,7 +126,7 @@
     <property name="geometry">
      <rect>
       <x>670</x>
-      <y>80</y>
+      <y>70</y>
       <width>75</width>
       <height>24</height>
      </rect>

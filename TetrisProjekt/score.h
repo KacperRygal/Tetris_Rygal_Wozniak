@@ -6,6 +6,7 @@ class Score
 {
 public:
     Score();
+    void reset();
     void addPointsByDeletedRows(int deletedRows);
     int getScore();
     int getCurrentLevel();

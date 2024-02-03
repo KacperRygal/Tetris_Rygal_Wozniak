@@ -34,6 +34,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         menu.h menu.cpp menu.ui
         save.h save.cpp save.ui
         ../build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Debug/wynik.txt
+        ../build-TetrisProjekt-Desktop_x86_windows_msvc2022_pe_64bit-Release/wynik.txt
 
 
 

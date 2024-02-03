@@ -12,6 +12,7 @@ class Save : public QDialog
     Q_OBJECT
 signals:
     void zapisaneClicked();
+    void pokazMenu();
 
 public:
     explicit Save(QWidget *parent = nullptr);
@@ -21,7 +22,11 @@ public:
 private slots:
     void on_ZapiszBtn_clicked();
 
+    void Wyswietl();
 
+    void on_MenuBtn_clicked();
+
+    void on_ZamknijBtn_clicked();
 
 private:
     Ui::Save *ui;

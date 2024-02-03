@@ -17,7 +17,8 @@ class MainWindowTetris : public QMainWindow
     Q_OBJECT
 
 
-
+signals:
+    void Zamknij();
 public:
     MainWindowTetris(QWidget *parent = nullptr);
     ~MainWindowTetris();
@@ -37,6 +38,12 @@ private slots:
     void on_ZapiszBtn_clicked();
 
     void zamknijZapisane();
+
+    void pokazMenu();
+
+    void nowaGra();
+
+
 
 private:
     Menu *menu;

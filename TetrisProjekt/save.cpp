@@ -9,8 +9,38 @@ Save::Save(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Zapis");
-    QString fileName = "wynik.txt";
+}
+Save::~Save()
+{
+    delete ui;
+}
 
+void Save::on_ZapiszBtn_clicked()
+{
+    if(!ui->nazwaTxt->toPlainText().isEmpty()){
+    QFile file("wynik.txt");
+        QString tmp;
+    if (file.open(QIODevice::WriteOnly |QIODevice::Append| QIODevice::Text)) {
+
+        QTextStream stream(&file);
+
+        QString textToWrite =ui->nazwaTxt->toPlainText().first(3).toUpper()+ " "+ QString::number(wynik)+"\n";
+
+
+        stream << textToWrite;
+
+        file.close();
+    }
+    ui->ZapiszBtn->setDisabled(true);
+    Wyswietl();
+    }
+
+}
+
+void Save::Wyswietl()
+{
+    ui->ListaWynik->clear();
+    QString fileName = "wynik.txt";
     QFile file(fileName);
     if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) {
         qDebug() << "Nie można otworzyć pliku.";
@@ -38,32 +68,25 @@ Save::Save(QWidget *parent)
         ui->ListaWynik->addItem(item);
     }
 }
-Save::~Save()
-{
-    delete ui;
-}
-
-void Save::on_ZapiszBtn_clicked()
-{
-    if(!ui->nazwaTxt->toPlainText().isEmpty()){
-    QFile file("wynik.txt");
-
-    if (file.open(QIODevice::WriteOnly |QIODevice::Append| QIODevice::Text)) {
-
-        QTextStream stream(&file);
-
-        QString textToWrite =ui->nazwaTxt->toPlainText().first(3).toUpper()+ " "+ QString::number(wynik)+"\n";
-
-        stream << textToWrite;
-
-        file.close();
-    }
-    emit zapisaneClicked();
-    }
-}
 
 void Save::setWynik(int w)
 {
+    ui->ListaWynik->clear();
     wynik=w;
     ui->aktWynik->setText("Aktualny wynik = "+QString::number(w));
+
+    Wyswietl();
 }
+
+void Save::on_MenuBtn_clicked()
+{
+    ui->ZapiszBtn->setEnabled(true);
+    emit pokazMenu();
+}
+
+
+void Save::on_ZamknijBtn_clicked()
+{
+     emit zapisaneClicked();
+}
+
