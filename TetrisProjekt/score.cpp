@@ -27,6 +27,7 @@ void Score::addPointsByDeletedRows(int deletedRows)
         case 3:
             temp = 300 * (currentLevel + 1);
             break;
+        default:
         case 4:
             temp = 1200 * (currentLevel + 1);
             break;

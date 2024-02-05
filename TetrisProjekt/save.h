@@ -31,6 +31,7 @@ private slots:
 private:
     Ui::Save *ui;
     int wynik=0;
+    QString fileName = "wynik.txt";
 };
 
 #endif // SAVE_H

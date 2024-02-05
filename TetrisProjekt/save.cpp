@@ -18,14 +18,13 @@ Save::~Save()
 void Save::on_ZapiszBtn_clicked()
 {
     if(!ui->nazwaTxt->toPlainText().isEmpty()){
-    QFile file("wynik.txt");
-        QString tmp;
+    QFile file(fileName);
+
     if (file.open(QIODevice::WriteOnly |QIODevice::Append| QIODevice::Text)) {
 
         QTextStream stream(&file);
 
         QString textToWrite =ui->nazwaTxt->toPlainText().first(3).toUpper()+ " "+ QString::number(wynik)+"\n";
-
 
         stream << textToWrite;
 
@@ -40,7 +39,7 @@ void Save::on_ZapiszBtn_clicked()
 void Save::Wyswietl()
 {
     ui->ListaWynik->clear();
-    QString fileName = "wynik.txt";
+
     QFile file(fileName);
     if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) {
         qDebug() << "Nie można otworzyć pliku.";

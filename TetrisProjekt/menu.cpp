@@ -15,7 +15,7 @@ Menu::Menu(QWidget *parent)
 void Menu::Wyswietl()
 {
     ui->ListaWynik->clear();
-    QString fileName = "wynik.txt";
+
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) {
@@ -69,7 +69,7 @@ void Menu::on_SkasujBtn_clicked()
         delete ui->ListaWynik->takeItem(ui->ListaWynik->row(item));
     }
 
-    QFile file("wynik.txt");
+    QFile file(fileName);
 
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
 

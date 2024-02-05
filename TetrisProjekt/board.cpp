@@ -7,6 +7,7 @@ Board::Board(QObject *parent) : QObject(parent), timer(new QTimer(this)), board(
     connect(timer,&QTimer::timeout,this,&Board::updateBoard);
     timer->setInterval(400);
     LvlTimeInterval=400;
+
 }
 
 //DESTRUKTOR
@@ -60,12 +61,9 @@ void Board::updateCurrentPiece()
     updateNextPiece();
     if(levelRows>=5)
     {
-        qInfo()<<"Interwal: "<<LvlTimeInterval;
-
         levelRows-=5;
         if(LvlTimeInterval>=50)
-        {
-             qInfo()<<"Test2";
+        {    
             LvlTimeInterval-=40;
             setTimerInterval(LvlTimeInterval);
             score.updateCurrentLevel();

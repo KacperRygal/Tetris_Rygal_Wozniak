@@ -33,6 +33,7 @@ private slots:
 
 private:
     Ui::Menu *ui;
+    QString fileName = "wynik.txt";
 };
 
 #endif // MENU_H

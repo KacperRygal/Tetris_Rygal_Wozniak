@@ -80,7 +80,7 @@ MainWindowTetris::MainWindowTetris(QWidget *parent)
 
 
 
-
+        on_pushButton_clicked();
 }
 
 MainWindowTetris::~MainWindowTetris()
@@ -148,9 +148,6 @@ void MainWindowTetris::on_clearButton_clicked()
 
 void MainWindowTetris::zamknijOkno() {
     emit Zamknij();
-   // menu->close();
-  //  save->close();
-  //  this->close();
 }
 
 void MainWindowTetris::on_ZapiszBtn_clicked()
@@ -163,9 +160,6 @@ void MainWindowTetris::on_ZapiszBtn_clicked()
 void MainWindowTetris::zamknijZapisane()
 {
     emit Zamknij();
-  //  save->close();
-  //  menu->close();
-   // this->close();
 }
 
 void MainWindowTetris::pokazMenu()
