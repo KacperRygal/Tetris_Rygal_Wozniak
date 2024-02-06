@@ -85,4 +85,7 @@ void Menu::on_SkasujBtn_clicked()
     }
 }
 
+void Menu::closeEvent(QCloseEvent *event) {
+    emit zakonczClicked();
+}
 

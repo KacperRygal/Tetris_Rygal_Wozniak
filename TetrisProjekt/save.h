@@ -28,10 +28,13 @@ private slots:
 
     void on_ZamknijBtn_clicked();
 
+    void closeEvent(QCloseEvent *event);
 private:
     Ui::Save *ui;
     int wynik=0;
     QString fileName = "wynik.txt";
+
+
 };
 
 #endif // SAVE_H

@@ -45,6 +45,8 @@ private slots:
 
 
 
+
+
 private:
     Menu *menu;
     QColor colors[7] = {Qt::red, Qt::green, Qt::blue, Qt::yellow, Qt::magenta, Qt::cyan, Qt::black};

@@ -30,10 +30,13 @@ private slots:
 
     void on_SkasujBtn_clicked();
 
+    void closeEvent(QCloseEvent *event);
 
 private:
     Ui::Menu *ui;
     QString fileName = "wynik.txt";
+
+
 };
 
 #endif // MENU_H

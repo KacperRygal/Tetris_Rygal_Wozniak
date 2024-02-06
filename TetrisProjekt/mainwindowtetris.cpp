@@ -23,7 +23,6 @@ MainWindowTetris::MainWindowTetris(QWidget *parent)
     menu = new Menu(this);
     connect(menu, &Menu::zakonczClicked, this, &MainWindowTetris::zamknijOkno);
     connect(menu, &Menu::nowaGra, this, &MainWindowTetris::nowaGra);
-
     menu->setModal(true);
     menu->show();
 
@@ -176,5 +175,6 @@ void MainWindowTetris::nowaGra()
     on_clearButton_clicked();
     this->show();
 }
+
 
 

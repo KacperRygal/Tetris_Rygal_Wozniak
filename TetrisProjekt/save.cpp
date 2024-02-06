@@ -89,3 +89,6 @@ void Save::on_ZamknijBtn_clicked()
      emit zapisaneClicked();
 }
 
+void Save::closeEvent(QCloseEvent *event) {
+    emit on_ZamknijBtn_clicked();
+}
