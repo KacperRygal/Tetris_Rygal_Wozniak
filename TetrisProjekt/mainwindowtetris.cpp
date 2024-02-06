@@ -79,7 +79,7 @@ MainWindowTetris::MainWindowTetris(QWidget *parent)
 
 
 
-        on_pushButton_clicked();
+        on_pauseButton_clicked();
 }
 
 MainWindowTetris::~MainWindowTetris()
@@ -153,6 +153,7 @@ void MainWindowTetris::on_ZapiszBtn_clicked()
 {
     this->hide();
     save->setWynik(gameWidget->getBoard()->getScore().getScore());
+
     save->show();
 }
 
@@ -172,6 +173,7 @@ void MainWindowTetris::pokazMenu()
 void MainWindowTetris::nowaGra()
 {
     menu->hide();
+    on_pushButton_clicked();
     on_clearButton_clicked();
     this->show();
 }
